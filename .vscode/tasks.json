@@ -1,0 +1,40 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "sqlproj: Build PROJECT 1",
+			"type": "process",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"/Users/ryanamos/Sports/PROJECT 1/PROJECT 1.sqlproj"
+			],
+			"problemMatcher": "$sqlproj-problem-matcher",
+			"isBackground": true,
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "Builds the PROJECT 1 SQL project"
+		},
+		{
+			"label": "sqlproj: Build r",
+			"type": "process",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"/Users/ryanamos/Sports/PROJECT 1/r/r.sqlproj",
+				"/p:NetCoreBuild=true",
+				"/p:NETCoreTargetsPath=/Users/ryanamos/.vscode/extensions/ms-mssql.sql-database-projects-vscode-1.7.0/BuildDirectory",
+				"/p:SystemDacpacsLocation=/Users/ryanamos/.vscode/extensions/ms-mssql.sql-database-projects-vscode-1.7.0/BuildDirectory"
+			],
+			"problemMatcher": "$sqlproj-problem-matcher",
+			"isBackground": true,
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"detail": "Builds the r SQL project"
+		}
+	]
+}
